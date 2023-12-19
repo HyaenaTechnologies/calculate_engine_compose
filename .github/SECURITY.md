@@ -5,7 +5,7 @@
 ## Supported Versions
 
 | Version | Support     |
-| ------- | ----------- |
+|---------|-------------|
 | > 0.2.0 | Supported   |
 | = 0.2.0 | Supported   |
 | < 0.2.0 | Unsupported |
