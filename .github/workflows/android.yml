@@ -23,7 +23,7 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
-        cache: gradle
+        cache: maven
     
     - name: Dependency Graph
       uses: advanced-security/maven-dependency-submission-action@v3.0.3
