@@ -1,0 +1,29 @@
+name: Android
+
+on:
+  push:
+    branches: [ "main" ]
+    
+  pull_request:
+    branches: [ "main" ]
+    
+  schedule:
+  - cron: "30 03 * * 1-5"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    
+    - name: Checkout Repository
+      uses: actions/checkout@v4.1.1
+      
+    - name: set up JDK
+      uses: actions/setup-java@v4.0.0
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+        cache: gradle
+    
+    - name: Dependency Graph
+      uses: advanced-security/maven-dependency-submission-action@v3.0.3

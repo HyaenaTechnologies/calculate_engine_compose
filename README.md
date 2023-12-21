@@ -18,6 +18,8 @@
   </h1>
 </a>
 
+[![Android Workflow](https://github.com/HyaenaTechnologies/calculate_engine_compose/actions/workflows/android.yml/badge.svg)](https://github.com/HyaenaTechnologies/calculate_engine_compose/actions/workflows/android.yml)
+
 # Calculate Engine
 
 Calculate Engine is an Open Source Mathematics Engine. The function is to provide Calculators, Steps and promote [OpenStax][Stax], [Rice University][Rice].
@@ -36,4 +38,10 @@ Calculate Engine is an Open Source Mathematics Engine. The function is to provid
 
 ```shell
 gradle build
+```
+
+OR
+
+```shell
+gradlew build
 ```
