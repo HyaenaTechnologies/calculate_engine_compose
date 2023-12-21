@@ -1,6 +1,6 @@
 [Android]: https://developer.android.com/studio
 [Compose]: https://developer.android.com/jetpack/compose
-[ComposeMulti]: https://www.jetbrains.com/lp/compose-multiplatform/
+[ComposeMulti]: https://jetbrains.com/lp/compose-multiplatform/
 [Fleet]: https://jetbrains.com/fleet/
 [Gradle]: https://gradle.org/
 [IDEA]: https://jetbrains.com/idea/
