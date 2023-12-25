@@ -1,4 +1,4 @@
-package dev.hyaena_technologies.calculate_engine.theme
+package dev.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme

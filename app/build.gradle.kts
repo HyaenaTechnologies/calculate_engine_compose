@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "dev.hyaena_technologies.calculate_engine"
+    namespace = "dev"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "dev.hyaena_technologies.calculate_engine"
+        applicationId = "dev"
         minSdk = 21
         targetSdk = 34
         versionCode = 1
@@ -74,7 +74,7 @@ dependencies {
     implementation(lib.bundles.ktor)
     implementation(lib.bundles.lifecycle)
     implementation(lib.bundles.ui)
-    implementation("org.jetbrains.kotlin:kotlin-stdlib:1.9.21")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib:1.9.22")
     implementation("org.jetbrains.kotlinx:kotlinx-collections-immutable:0.3.7")
     implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.5.0")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-core:1.6.2")
@@ -82,7 +82,7 @@ dependencies {
     testImplementation("androidx.compose.ui:ui-test:1.5.4")
     testImplementation("com.google.accompanist:accompanist-testharness:0.33.2-alpha")
     testImplementation("io.ktor:ktor-client-tests:2.3.7")
-    testImplementation("org.jetbrains.kotlin:kotlin-test:1.9.21")
+    testImplementation("org.jetbrains.kotlin:kotlin-test:1.9.22")
     testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.3")
     testImplementation("org.jetbrains.kotlinx:lincheck:2.23")
 }

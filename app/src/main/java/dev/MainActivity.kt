@@ -1,4 +1,4 @@
-package dev.hyaena_technologies.calculate_engine
+package dev
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -7,8 +7,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
-import dev.hyaena_technologies.calculate_engine.theme.CalculateEngineTheme
-import dev.hyaena_technologies.calculate_engine.widgets.HomeRoute
+import dev.theme.CalculateEngineTheme
+import dev.widgets.HomeRoute
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
