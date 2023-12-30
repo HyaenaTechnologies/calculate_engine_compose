@@ -1,11 +1,3 @@
-plugins {
-    id("org.jetbrains.kotlin.jvm")
-    id("io.ktor.plugin")
-    application
-}
-
-group = "dev.hyaena_technologies"
-version = "0.2.0"
 application {
     mainClass.set("dev.hyaena_technologies.ApplicationKt")
     applicationDefaultJvmArgs = listOf("-Dio.ktor.development=${extra["development"] ?: "false"}")
@@ -16,3 +8,35 @@ dependencies {
     implementation(lib.bundles.ktor)
     implementation(projects.shared)
 }
+
+group = "dev.hyaena_technologies"
+
+kotlin {
+    linuxArm64() {
+
+    }
+
+    linuxX64() {
+
+    }
+
+    macosArm64() {
+
+    }
+
+    macosX64() {
+
+    }
+
+    mingwX64(){
+
+    }
+}
+
+plugins {
+    id("io.ktor.plugin")
+    id("org.jetbrains.kotlin.multiplatform")
+    application
+}
+
+version = "0.2.0"

@@ -1,11 +1,13 @@
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.PREFER_PROJECT)
     repositories {
         google()
         gradlePluginPortal()
         mavenCentral()
         maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
     }
+
+    repositoriesMode.set(RepositoriesMode.PREFER_PROJECT)
+
     versionCatalogs {
         create("lib") {
             version("accompanist", "0.33.2-alpha")
@@ -131,7 +133,12 @@ dependencyResolutionManagement {
         }
     }
 }
+
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+
+include(":common")
+include(":server")
+include(":shared")
 
 pluginManagement {
     repositories {
@@ -141,9 +148,5 @@ pluginManagement {
         maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
     }
 }
-
-include(":composeApp")
-include(":server")
-include(":shared")
 
 rootProject.name = "CalculateEngine"
