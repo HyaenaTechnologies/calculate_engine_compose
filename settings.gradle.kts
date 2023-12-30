@@ -1,8 +1,10 @@
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositoriesMode.set(RepositoriesMode.PREFER_PROJECT)
     repositories {
         google()
+        gradlePluginPortal()
         mavenCentral()
+        maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
     }
     versionCatalogs {
         create("lib") {
@@ -129,12 +131,19 @@ dependencyResolutionManagement {
         }
     }
 }
-include(":app")
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+
 pluginManagement {
     repositories {
         google()
-        mavenCentral()
         gradlePluginPortal()
+        mavenCentral()
+        maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
     }
 }
-rootProject.name = "Calculate Engine"
+
+include(":composeApp")
+include(":server")
+include(":shared")
+
+rootProject.name = "CalculateEngine"
