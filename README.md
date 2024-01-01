@@ -13,7 +13,7 @@
 <a href="https://github.com/HyaenaTechnologies/calculate_engine_compose">
   <h1>
     <picture>
-      <img src="https://github.com/HyaenaTechnologies/calculate_engine_compose/blob/main/app/src/main/res/raw/hce_markdown.png" alt="">
+      <img src="https://github.com/HyaenaTechnologies/calculate_engine_compose/blob/main/common/src/commonMain/resources/hce_markdown.png" alt="">
     </picture>
   </h1>
 </a>

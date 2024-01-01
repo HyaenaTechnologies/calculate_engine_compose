@@ -1,5 +1,3 @@
-package dev.widgets
-
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column

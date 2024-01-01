@@ -1,12 +1,10 @@
 application {
-    mainClass.set("dev.hyaena_technologies.ApplicationKt")
     applicationDefaultJvmArgs = listOf("-Dio.ktor.development=${extra["development"] ?: "false"}")
+    mainClass.set("dev.hyaena_technologies.ApplicationKt")
 }
 
 dependencies {
-    implementation("io.ktor:ktor-client-tests:2.3.7")
-    implementation(lib.bundles.ktor)
-    implementation(projects.shared)
+    implementation(projects.common)
 }
 
 group = "dev.hyaena_technologies"
@@ -34,9 +32,9 @@ kotlin {
 }
 
 plugins {
+    application
     id("io.ktor.plugin")
     id("org.jetbrains.kotlin.multiplatform")
-    application
 }
 
 version = "0.2.0"

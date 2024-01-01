@@ -1,5 +1,3 @@
-package dev.theme
-
 import androidx.compose.ui.graphics.Color
 
 // Custom Colors
