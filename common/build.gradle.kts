@@ -170,6 +170,9 @@ kotlin {
         desktopMain.dependencies {
             implementation(projects.common)
         }
+        iosMain.dependencies {
+            implementation(projects.common)
+        }
     }
 }
 
