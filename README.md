@@ -35,11 +35,15 @@ Calculate Engine is an Open Source Mathematics Engine. The function is to provid
 - [Visual Studio Code][VSCode]
 
 ```shell
+git clone
+
 gradle build
 ```
 
 OR
 
 ```shell
+git clone
+
 gradlew build
 ```
