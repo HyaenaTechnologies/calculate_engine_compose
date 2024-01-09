@@ -173,6 +173,9 @@ kotlin {
         iosMain.dependencies {
             implementation(projects.common)
         }
+        jsMain.dependencies {
+            implementation(projects.common)
+        }
     }
 }
 
