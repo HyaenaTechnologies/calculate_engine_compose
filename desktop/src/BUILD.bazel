@@ -1,0 +1,42 @@
+load(
+    "@io_bazel_rules_kotlin//kotlin:android.bzl", 
+    "kt_android_library",
+)
+load(
+    "@rules_kotlin//kotlin:jvm.bzl", 
+    "kt_jvm_binary",
+)
+
+kt_jvm_binary(
+    main_class = "main",
+    deps = [
+    ":calculate_engine_lib",
+    ],
+    name = "calculate_engine_jvm",
+    plugins = ["//:compose_plugin"],
+    resources = glob([
+        "src/res/**/*"
+        "lib/src/resources/**/*"
+    ]),
+    srcs = [
+        "src/kotlin/*.kt",
+        "src/kotlin/**/*.kt",
+    ],
+)
+
+kt_android_library(
+    custom_package = "dev.hyaena_technologies.calculate_engine.desktop",
+    deps = [
+    ":calculate_engine_lib",
+    ],
+    name = "calculate_engine_desktop",
+    plugins = ["//:compose_plugin"],
+    resource_files = glob([
+        "src/res/**/*"
+        "lib/src/resources/**/*"
+    ]),
+    srcs = [
+        "src/kotlin/*.kt",
+        "src/kotlin/**/*.kt",
+    ],
+)

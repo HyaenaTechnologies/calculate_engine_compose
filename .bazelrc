@@ -1,0 +1,12 @@
+# Flags needed while the Android rules are being migrated to Starlark.
+common --android_databinding_use_v3_4_args
+common --enable_bzlmod
+common --experimental_android_databinding_v2
+common --experimental_enable_android_migration_apis
+common --experimental_google_legacy_api
+common --incompatible_java_common_parameters
+
+# Flags to enable mobile-install v3
+mobile-install --mode=skylark --mobile_install_aspect=@rules_android//mobile_install:mi.bzl --mobile_install_supported_rules=android_binary
+# Required to invoke the Studio deployer jar
+mobile-install --tool_java_runtime_version=17

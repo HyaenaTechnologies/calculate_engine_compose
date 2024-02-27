@@ -1,0 +1,52 @@
+load(
+    "@io_bazel_rules_kotlin//kotlin:android.bzl", 
+    "kt_android_library",
+)
+load(
+    "@rules_android//android:rules.bzl",
+    "android_binary",
+)
+
+kt_android_binary(
+    assets = glob([
+        "src/assets/**/*"
+    ]),
+    assets_dir = "src/assets"
+    custom_package = "dev.hyaena_technologies.calculate_engine.android",
+    deps = [
+    ":calculate_engine_lib",
+    ],
+    manifest = "src/AndroidManifest.xml",
+    name = "calculate_engine_apk",
+    plugins = ["//:compose_plugin"],
+    resource_files = glob([
+        "src/res/**/*"
+        "lib/src/resources/**/*"
+    ]),
+    srcs = [
+        "src/kotlin/*.kt",
+        "src/kotlin/**/*.kt",
+    ],
+)
+
+kt_android_library(
+    assets = glob([
+        "src/assets/**/*"
+    ]),
+    assets_dir = "src/assets"
+    custom_package = "dev.hyaena_technologies.calculate_engine.android",
+    deps = [
+    ":calculate_engine_lib",
+    ],
+    manifest = "src/AndroidManifest.xml",
+    name = "calculate_engine_android",
+    plugins = ["//:compose_plugin"],
+    resource_files = glob([
+        "src/res/**/*"
+        "lib/src/resources/**/*"
+    ]),
+    srcs = [
+        "src/kotlin/*.kt",
+        "src/kotlin/**/*.kt",
+    ],
+)

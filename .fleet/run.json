@@ -1,0 +1,17 @@
+{
+    "configurations": [
+        {
+            "name": "Run Bash",
+            "program": "/usr/bin/bash",
+            "type": "command"
+        },
+        {
+            "args": [
+                "build"
+            ],
+            "name": "Bazel Build",
+            "program": "/usr/bin/kotlin/bazel_build/bazel",
+            "type": "command"
+        }
+    ]
+}
