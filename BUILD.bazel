@@ -8,7 +8,7 @@ load(
 )
 
 define_kt_toolchain(
-    api_version = "1.9.22",
+    api_version = "1.9",
     experimental_multiplex_workers = True,
     experimental_reduce_classpath_mode = True,
     experimental_report_unused_deps = True,
@@ -17,7 +17,7 @@ define_kt_toolchain(
     javac_options = "-Xmx2048M -Dfile.encoding=UTF-8",
     jvm_target = 17
     kotlinc_options = "-Xmx2048M -Dfile.encoding=UTF-8",
-    language_version = "1.9.22",
+    language_version = "1.9",
     name = "kotlin_toolchain",
 )
 
