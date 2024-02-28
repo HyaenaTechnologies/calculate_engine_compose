@@ -43,7 +43,7 @@ kt_android_library(
         "@maven//:io_ktor_ktor_http",
         "@maven//:io_ktor_ktor_http_cio",
         "@maven//:io_ktor_ktor_io",
-        "@maven//:io_ktor_ktor_network,
+        "@maven//:io_ktor_ktor_network",
         "@maven//:io_ktor_ktor_network_tls",
         "@maven//:io_ktor_ktor_network_tls_certificates",
         "@maven//:io_ktor_ktor_resources",
