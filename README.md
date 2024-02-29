@@ -30,7 +30,7 @@
   </h1>
 </a>
 
-[![Android Workflow](https://github.com/HyaenaTechnologies/calculate_engine_compose/actions/workflows/android.yml/badge.svg)](https://github.com/HyaenaTechnologies/calculate_engine_compose/actions/workflows/android.yml)
+[![Bazel Workflow](https://github.com/HyaenaTechnologies/calculate_engine_compose/actions/workflows/android.yml/badge.svg)](https://github.com/HyaenaTechnologies/calculate_engine_compose/actions/workflows/android.yml)
 
 # Calculate Engine
 
@@ -53,13 +53,5 @@ Steps and promote [OpenStax][Stax], [Rice University][Rice].
 ```shell
 git clone
 
-gradle build
-```
-
-OR
-
-```shell
-git clone
-
-gradlew build
+bazel build
 ```
