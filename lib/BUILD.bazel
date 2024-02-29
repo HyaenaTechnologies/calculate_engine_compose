@@ -86,9 +86,9 @@ kt_android_library(
     ],
     name = "calculate_engine_lib",
     plugins = ["//:compose_plugin"],
-    resource_files = glob(["src/resources/**/*"]),
+    resource_files = glob(["src/main/resources/**/*"]),
     srcs = [
-        "src/kotlin/*.kt",
-        "src/kotlin/**/*.kt",
+        "src/main/kotlin/*.kt",
+        "src/main/kotlin/**/*.kt",
     ],
 )
