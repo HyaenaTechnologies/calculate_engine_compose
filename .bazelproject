@@ -24,12 +24,12 @@ java_language_level: 17
 shard_sync: true
 
 targets:
-  //android
-  //desktop
-  //ios
-  //lib
-  //test
-  //web
+  //android:Android
+  //desktop:Desktop
+  //ios:IOS
+  //lib:Lib
+  //test:Test
+  //web:Web
 
 test_sources:
   test/src/main/kotlin/*.kt
