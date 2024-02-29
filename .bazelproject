@@ -12,24 +12,24 @@ android_sdk_platform: "UpsideDownCake"
 bazel_binary: usr/bin/kotlin/bazel_build
 
 directories:
-  android/src/main/kotlin
-  desktop/src/main/kotlin
-  ios/src/main/kotlin
-  lib/src/main/kotlin
-  test/src/main/kotlin
-  web/src/main/kotlin
+  android
+  desktop
+  ios
+  lib
+  test
+  web
 
 java_language_level: 17
 
 shard_sync: true
 
 targets:
-  android/src/main/kotlin:Android
-  desktop/src/main/kotlin:Desktop
-  ios/src/main/kotlin:IOS
-  lib/src/main/kotlin:Library
-  test/src/main/kotlin:Test
-  web/src/main/kotlin:Web
+  //android
+  //desktop
+  //ios
+  //lib
+  //test
+  //web
 
 test_sources:
   test/src/main/kotlin/*.kt
