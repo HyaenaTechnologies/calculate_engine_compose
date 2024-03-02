@@ -7,7 +7,7 @@ additional_languages:
 
 android_min_sdk: 34
 
-android_sdk_platform: "UpsideDownCake"
+android_sdk_platform: "android-34"
 
 bazel_binary: usr/bin/kotlin/bazel_build
 
@@ -35,4 +35,4 @@ test_sources:
   test/src/main/kotlin/*.kt
   test/src/main/kotlin/**/*.kt
 
-workspace_type: Android
+workspace_type: android
