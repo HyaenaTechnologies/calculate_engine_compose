@@ -15,7 +15,7 @@ define_kt_toolchain(
     experimental_strict_kotlin_deps = True,
     experimental_use_abi_jars = True,
     javac_options = "-Xmx2048M -Dfile.encoding=UTF-8",
-    jvm_target = 17
+    jvm_target = "17"
     kotlinc_options = "-Xmx2048M -Dfile.encoding=UTF-8",
     language_version = "1.9",
     name = "kotlin_toolchain",
