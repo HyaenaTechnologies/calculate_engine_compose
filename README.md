@@ -25,7 +25,7 @@
 <a href="https://github.com/HyaenaTechnologies/calculate_engine_compose">
   <h1>
     <picture>
-      <img src="https://github.com/HyaenaTechnologies/calculate_engine_compose/blob/main/lib/src/resources/hce_markdown.png" alt="">
+      <img src="https://github.com/HyaenaTechnologies/calculate_engine_compose/blob/main/lib/src/main/resources/hce_markdown.png" alt="">
     </picture>
   </h1>
 </a>
