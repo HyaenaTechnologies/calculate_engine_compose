@@ -1,0 +1,31 @@
+load(
+    "@build_bazel_rules_nodejs//:index.bzl", 
+    "nodejs_binary",
+)
+load(
+    "@io_bazel_rules_kotlin//kotlin:android.bzl", 
+    "kt_android_library",
+)
+
+nodejs_binary(
+    data = [":calculate_engine_web"],
+    entry_point = ":main.js",
+    name = "calculate_engine_nodejs",
+    visibility = ["//visibility:public"],
+)
+
+kt_android_library(
+    custom_package = "dev.hyaena_technologies.calculate_engine.web",
+    deps = [
+    ":calculate_engine_lib",
+    ],
+    name = "calculate_engine_web",
+    plugins = ["//:compose_plugin"],
+    resource_files = glob([
+        "lib/src/main/resources/**/*"
+    ]),
+    srcs = [
+        "src/main/kotlin/*.kt",
+        "src/main/kotlin/**/*.kt",
+    ],
+)

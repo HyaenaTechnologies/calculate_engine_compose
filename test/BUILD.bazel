@@ -1,0 +1,20 @@
+load(
+    "@io_bazel_rules_kotlin//kotlin:android.bzl", 
+    "kt_android_library",
+)
+
+kt_android_library(
+    custom_package = "dev.hyaena_technologies.calculate_engine.test",
+    deps = [
+    ":calculate_engine_lib",
+    ],
+    name = "calculate_engine_test",
+    plugins = ["//:compose_plugin"],
+    resource_files = glob([
+        "lib/src/main/resources/**/*"
+    ]),
+    srcs = [
+        "src/main/kotlin/*.kt",
+        "src/main/kotlin/**/*.kt",
+    ],
+)
