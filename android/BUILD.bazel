@@ -1,5 +1,5 @@
 load(
-    "@io_bazel_rules_kotlin//kotlin:android.bzl", 
+    "@io_bazel_rules_kotlin//kotlin:android.bzl",
     "kt_android_library",
 )
 load(
@@ -7,46 +7,46 @@ load(
     "android_binary",
 )
 
-kt_android_binary(
-    assets = glob([
-        "src/main/assets/**/*"
-    ]),
-    assets_dir = "src/main/assets"
-    custom_package = "dev.hyaena_technologies.calculate_engine.android",
-    deps = [
-    ":calculate_engine_lib",
-    ],
-    manifest = "src/main/AndroidManifest.xml",
+android_binary(
     name = "calculate_engine_apk",
-    plugins = ["//:compose_plugin"],
-    resource_files = glob([
-        "src/main/res/**/*"
-        "lib/src/main/resources/**/*"
-    ]),
     srcs = [
         "src/main/kotlin/*.kt",
         "src/main/kotlin/**/*.kt",
+    ],
+    assets = glob([
+        "src/main/assets/**/*",
+    ]),
+    assets_dir = "src/main/assets",
+    custom_package = "dev.hyaena_technologies.calculate_engine.android",
+    manifest = "src/main/AndroidManifest.xml",
+    plugins = ["//:compose_plugin"],
+    resource_files = glob([
+        "src/main/res/**/*",
+        "lib/src/main/resources/**/*",
+    ]),
+    deps = [
+        ":calculate_engine_lib",
     ],
 )
 
 kt_android_library(
-    assets = glob([
-        "src/main/assets/**/*"
-    ]),
-    assets_dir = "src/main/assets"
-    custom_package = "dev.hyaena_technologies.calculate_engine.android",
-    deps = [
-    ":calculate_engine_lib",
-    ],
-    manifest = "src/main/AndroidManifest.xml",
     name = "calculate_engine_android",
-    plugins = ["//:compose_plugin"],
-    resource_files = glob([
-        "src/main/res/**/*"
-        "lib/src/main/resources/**/*"
-    ]),
     srcs = [
         "src/main/kotlin/*.kt",
         "src/main/kotlin/**/*.kt",
+    ],
+    assets = glob([
+        "src/main/assets/**/*",
+    ]),
+    assets_dir = "src/main/assets",
+    custom_package = "dev.hyaena_technologies.calculate_engine.android",
+    manifest = "src/main/AndroidManifest.xml",
+    plugins = ["//:compose_plugin"],
+    resource_files = glob([
+        "src/main/res/**/*",
+        "lib/src/main/resources/**/*",
+    ]),
+    deps = [
+        ":calculate_engine_lib",
     ],
 )

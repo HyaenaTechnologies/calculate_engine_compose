@@ -1,109 +1,139 @@
 "Bazel Dependencies"
-module(name = "calculate_engine")
+
+module(name = "calculate_engine_module")
 
 bazel_dep(
-    name = "apple_support", version = "1.13.0", 
+    name = "apple_support",
+    version = "1.13.0",
     repo_name = "build_bazel_apple_support",
 )
-bazel_dep(name = "platforms", version = "0.0.8")
-bazel_dep(name = "rules_apple", version = "3.3.0")
-bazel_dep(name = "rules_android", version = "0.1.1")
-bazel_dep(name = "rules_java", version = "6.4.0")
-bazel_dep(name = "rules_jvm_external", version = "6.0")
-bazel_dep(name = "rules_kotlin", version = "1.9.0")
-bazel_dep(name = "rules_nodejs", version = "6.0.5")
+
+bazel_dep(
+    name = "platforms",
+    version = "0.0.8",
+)
+
+bazel_dep(
+    name = "rules_apple",
+    version = "3.3.0",
+)
+
+bazel_dep(
+    name = "rules_android",
+    version = "0.1.1",
+)
+
+bazel_dep(
+    name = "rules_java",
+    version = "6.4.0",
+)
+
+bazel_dep(
+    name = "rules_jvm_external",
+    version = "6.0",
+)
+
+bazel_dep(
+    name = "rules_kotlin",
+    version = "1.9.0",
+)
+
+bazel_dep(
+    name = "rules_nodejs",
+    version = "6.0.5",
+)
 
 apple_cc_configure = use_extension(
-    "@build_bazel_apple_support//crosstool:setup.bzl", 
+    "@build_bazel_apple_support//crosstool:setup.bzl",
     "apple_cc_configure_extension",
 )
 
 remote_android_extensions = use_extension(
-    "@bazel_tools//tools/android:android_extensions.bzl", 
+    "@bazel_tools//tools/android:android_extensions.bzl",
     "remote_android_tools_extensions",
 )
 
 maven = use_extension(":extensions.bzl", "maven")
 
 maven.install(
-     artifacts = [
-    # Android
-    "androidx.activity:activity-compose:1.8.2",
-    "androidx.compose.animation:animation:1.5.4",
-    "androidx.compose.compiler:compiler:1.5.10"
-    "androidx.compose.foundation:foundation:1.5.4",
-    "androidx.compose.material:material:1.5.4",
-    "androidx.compose.material3:material3:1.1.2",
-    "androidx.compose.runtime:runtime:1.5.4",
-    "androidx.compose.ui:ui:1.5.4",
-    "androidx.compose.ui:ui-tooling:1.5.4",
-    "androidx.constraintlayout:constraintlayout-compose:1.0.1",
-    "androidx.core:core-ktx:1.12.0",
-    "androidx.lifecycle:lifecycle-runtime-compose:2.7.0",
-    "androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0",
-    "androidx.navigation:navigation-compose:2.7.6",
-    "androidx.paging:paging-compose:3.2.1",
-    "com.google.accompanist:accompanist-adaptive:0.35.0-alpha",
-    "com.google.accompanist:accompanist-drawablepainter:0.35.0-alpha",
-    "com.google.accompanist:accompanist-navigation-material:0.35.0-alpha",
-    "com.google.accompanist:accompanist-permissions:0.35.0-alpha",
-    "com.google.android.material:compose-theme-adapter:1.2.1",
-    "com.google.android.material:compose-theme-adapter-3:1.1.1",
-    "com.google.android.material:compose-theme-adapter-core:1.0.1",
-    # KTOR
-    "io.ktor:ktor-client-auth:2.3.8",
-    "io.ktor:ktor-client-core:2.3.8",
-    "io.ktor:ktor-client-cio:2.3.8",
-    "io.ktor:ktor-client-content-negotiation:2.3.8",
-    "io.ktor:ktor-client-encoding:2.3.8",
-    "io.ktor:ktor-client-json:2.3.8",
-    "io.ktor:ktor-client-logging:2.3.8",
-    "io.ktor:ktor-client-resources:2.3.8",
-    "io.ktor:ktor-client-serialization:2.3.8",
-    "io.ktor:ktor-events:2.3.8",
-    "io.ktor:ktor-http:2.3.8",
-    "io.ktor:ktor-http-cio:2.3.8",
-    "io.ktor:ktor-io:2.3.8",
-    "io.ktor:ktor-network:2.3.8",
-    "io.ktor:ktor-network-tls:2.3.8",
-    "io.ktor:ktor-network-tls-certificates:2.3.8",
-    "io.ktor:ktor-resources:2.3.8",
-    "io.ktor:ktor-serialization:2.3.8",
-    "io.ktor:ktor-serialization-kotlinx:2.3.8",
-    "io.ktor:ktor-serialization-kotlinx-json:2.3.8",
-    "io.ktor:ktor-utils:2.3.8",
-    "io.ktor:ktor-websockets:2.3.8",
-    "io.ktor:ktor-websocket-serialization:2.3.8",
-    # JetBrains
-    "org.jetbrains.compose.animation:animation:1.5.12",
-    "org.jetbrains.compose.desktop:desktop:1.5.12",
-    "org.jetbrains.compose.foundation:foundation:1.5.12",
-    "org.jetbrains.compose.html:html-core:1.5.12",
-    "org.jetbrains.compose.material:material:1.5.12",
-    "org.jetbrains.compose.material3:material3:1.5.12",
-    "org.jetbrains.compose.runtime:runtime:1.5.12",
-    "org.jetbrains.compose.ui:ui:1.5.12",
-    "org.jetbrains.kotlin:kotlin-stdlib:1.9.22",
-    "org.jetbrains.kotlinx:kotlinx-collections-immutable:0.3.7",
-    "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3",
-    "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3",
-    "org.jetbrains.kotlinx:kotlinx-datetime:0.5.0",
-    "org.jetbrains.kotlinx:kotlinx-io-bytestring:0.3.1",
-    "org.jetbrains.kotlinx:kotlinx-io-core:0.3.1",
-    "org.jetbrains.kotlinx:kotlinx-serialization-core:1.6.2",
-    "org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.2",
-    "org.jetbrains.kotlinx:kotlinx-serialization-properties:1.6.2",
-    "org.jetbrains.kotlinx:kotlinx-metadata-jvm:0.9.0",
-    # Tests
-    "androidx.compose.ui:ui-test:1.5.4",
-    "com.google.accompanist:accompanist-testharness:0.35.0-alpha",
-    "io.ktor:ktor-client-tests:2.3.8",
-    "io.ktor:ktor-client-content-negotiation-tests:2.3.8",
-    "io.ktor:ktor-serialization-tests:2.3.8",
-    "io.ktor:ktor-serialization-kotlinx-tests:2.3.8",
-    "org.jetbrains.kotlin:kotlin-test:1.9.22",
-    "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.3",
-    "org.jetbrains.kotlinx:lincheck:2.25",
+    artifacts = [
+        # Android
+        "androidx.activity:activity-compose:1.8.2",
+        "androidx.compose.animation:animation:1.5.4",
+        "androidx.compose.compiler:compiler:1.5.10",
+        "androidx.compose.foundation:foundation:1.6.2",
+        "androidx.compose.material:material:1.5.4",
+        "androidx.compose.material3:material3:1.1.2",
+        "androidx.compose.runtime:runtime:1.5.4",
+        "androidx.compose.ui:ui:1.5.4",
+        "androidx.compose.ui:ui-tooling:1.5.4",
+        "androidx.constraintlayout:constraintlayout-compose:1.0.1",
+        "androidx.core:core-ktx:1.12.0",
+        "androidx.lifecycle:lifecycle-runtime-compose:2.7.0",
+        "androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0",
+        "androidx.navigation:navigation-compose:2.7.6",
+        "androidx.paging:paging-compose:3.2.1",
+        "com.google.accompanist:accompanist-adaptive:0.35.0-alpha",
+        "com.google.accompanist:accompanist-drawablepainter:0.35.0-alpha",
+        "com.google.accompanist:accompanist-navigation-material:0.35.0-alpha",
+        "com.google.accompanist:accompanist-permissions:0.35.0-alpha",
+        "com.google.android.material:compose-theme-adapter:1.2.1",
+        "com.google.android.material:compose-theme-adapter-3:1.1.1",
+        "com.google.android.material:compose-theme-adapter-core:1.0.1",
+        # KTOR
+        "io.ktor:ktor-client-auth:2.3.8",
+        "io.ktor:ktor-client-core:2.3.8",
+        "io.ktor:ktor-client-cio:2.3.8",
+        "io.ktor:ktor-client-content-negotiation:2.3.8",
+        "io.ktor:ktor-client-encoding:2.3.8",
+        "io.ktor:ktor-client-json:2.3.8",
+        "io.ktor:ktor-client-logging:2.3.8",
+        "io.ktor:ktor-client-resources:2.3.8",
+        "io.ktor:ktor-client-serialization:2.3.8",
+        "io.ktor:ktor-events:2.3.8",
+        "io.ktor:ktor-http:2.3.8",
+        "io.ktor:ktor-http-cio:2.3.8",
+        "io.ktor:ktor-io:2.3.8",
+        "io.ktor:ktor-network:2.3.8",
+        "io.ktor:ktor-network-tls:2.3.8",
+        "io.ktor:ktor-network-tls-certificates:2.3.8",
+        "io.ktor:ktor-resources:2.3.8",
+        "io.ktor:ktor-serialization:2.3.8",
+        "io.ktor:ktor-serialization-kotlinx:2.3.8",
+        "io.ktor:ktor-serialization-kotlinx-json:2.3.8",
+        "io.ktor:ktor-utils:2.3.8",
+        "io.ktor:ktor-websockets:2.3.8",
+        "io.ktor:ktor-websocket-serialization:2.3.8",
+        # JetBrains
+        "org.jetbrains.compose.animation:animation:1.5.12",
+        "org.jetbrains.compose.desktop:desktop:1.5.12",
+        "org.jetbrains.compose.foundation:foundation:1.5.12",
+        "org.jetbrains.compose.html:html-core:1.5.12",
+        "org.jetbrains.compose.material:material:1.5.12",
+        "org.jetbrains.compose.material3:material3:1.5.12",
+        "org.jetbrains.compose.runtime:runtime:1.5.12",
+        "org.jetbrains.compose.ui:ui:1.5.12",
+        "org.jetbrains.kotlin:kotlin-stdlib:1.9.22",
+        "org.jetbrains.kotlinx:kotlinx-collections-immutable:0.3.7",
+        "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3",
+        "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3",
+        "org.jetbrains.kotlinx:kotlinx-datetime:0.5.0",
+        "org.jetbrains.kotlinx:kotlinx-io-bytestring:0.3.1",
+        "org.jetbrains.kotlinx:kotlinx-io-core:0.3.1",
+        "org.jetbrains.kotlinx:kotlinx-serialization-core:1.6.2",
+        "org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.2",
+        "org.jetbrains.kotlinx:kotlinx-serialization-properties:1.6.2",
+        "org.jetbrains.kotlinx:kotlinx-metadata-jvm:0.9.0",
+        # Tests
+        "androidx.compose.ui:ui-test:1.5.4",
+        "com.google.accompanist:accompanist-testharness:0.35.0-alpha",
+        "io.ktor:ktor-client-tests:2.3.8",
+        "io.ktor:ktor-client-content-negotiation-tests:2.3.8",
+        "io.ktor:ktor-serialization-tests:2.3.8",
+        "io.ktor:ktor-serialization-kotlinx-tests:2.3.8",
+        "org.jetbrains.kotlin:kotlin-test:1.9.22",
+        "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.3",
+        "org.jetbrains.kotlinx:lincheck:2.25",
     ],
     repositories = [
         "https://maven.pkg.jetbrains.space/public/p/compose/dev",
@@ -113,10 +143,11 @@ maven.install(
 )
 
 use_repo(apple_cc_configure, "local_config_apple_cc")
+
 use_repo(maven, "maven")
+
 use_repo(
-    remote_android_extensions, 
-    "android_gmaven_r8", 
+    remote_android_extensions,
+    "android_gmaven_r8",
     "android_tools",
 )
-

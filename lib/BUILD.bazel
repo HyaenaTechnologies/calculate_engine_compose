@@ -1,15 +1,24 @@
 load(
-    "@io_bazel_rules_kotlin//kotlin:android.bzl", 
+    "@io_bazel_rules_kotlin//kotlin:android.bzl",
     "kt_android_library",
 )
 
 kt_android_library(
+    name = "calculate_engine_lib",
+    srcs = [
+        "src/main/kotlin/*.kt",
+        "src/main/kotlin/**/*.kt",
+    ],
     custom_package = "dev.hyaena_technologies.calculate_engine.lib",
+    plugins = ["//:compose_plugin"],
+    resource_files = glob([
+        "src/main/resources/**/*",
+    ]),
     deps = [
         # Android
         "@maven//:androidx_activity_activity_compose",
         "@maven//:androidx_compose_animation_animation",
-        "@maven//:androidx_compose_compiler_compiler"
+        "@maven//:androidx_compose_compiler_compiler",
         "@maven//:androidx_compose_foundation_foundation",
         "@maven//:androidx_compose_material_material",
         "@maven//:androidx_compose_material3_material3",
@@ -83,12 +92,5 @@ kt_android_library(
         "@maven//:org_jetbrains_kotlin_kotlin_test",
         "@maven//:org_jetbrains_kotlinx_kotlinx_coroutines-test",
         "@maven//:org_jetbrains_kotlinx_lincheck",
-    ],
-    name = "calculate_engine_lib",
-    plugins = ["//:compose_plugin"],
-    resource_files = glob(["src/main/resources/**/*"]),
-    srcs = [
-        "src/main/kotlin/*.kt",
-        "src/main/kotlin/**/*.kt",
     ],
 )

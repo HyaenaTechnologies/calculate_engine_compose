@@ -1,13 +1,14 @@
 load(
-    "@build_bazel_rules_apple//apple:ios.bzl", 
+    "@build_bazel_rules_apple//apple:ios.bzl",
     "ios_application",
 )
 load(
-    "@io_bazel_rules_kotlin//kotlin:android.bzl", 
+    "@io_bazel_rules_kotlin//kotlin:android.bzl",
     "kt_android_library",
 )
 
 ios_application(
+    name = "calculate_engine_ipa",
     app_icons = "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/**",
     bundle_id = "dev.hyaena_technologies.CalculateEngine",
     bundle_name = "CalculateEngine",
@@ -17,24 +18,23 @@ ios_application(
         "ipad",
     ],
     infoplists = ["iosApp/iosApp/Info.plist"],
-    name = "calculate_engine_ipa",
     minimum_deployment_os_version = "17.0",
     minimum_os_version = "17.0",
     visibility = ["//visibility:public"],
 )
 
 kt_android_library(
-    custom_package = "dev.hyaena_technologies.calculate_engine.ios",
-    deps = [
-    ":calculate_engine_lib",
-    ],
     name = "calculate_engine_ios",
-    plugins = ["//:compose_plugin"],
-    resource_files = glob([
-        "lib/src/main/resources/**/*"
-    ]),
     srcs = [
         "src/main/kotlin/*.kt",
         "src/main/kotlin/**/*.kt",
+    ],
+    custom_package = "dev.hyaena_technologies.calculate_engine.ios",
+    plugins = ["//:compose_plugin"],
+    resource_files = glob([
+        "lib/src/main/resources/**/*",
+    ]),
+    deps = [
+        ":calculate_engine_lib",
     ],
 )

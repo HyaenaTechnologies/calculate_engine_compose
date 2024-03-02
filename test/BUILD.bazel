@@ -11,7 +11,7 @@ kt_android_library(
     name = "calculate_engine_test",
     plugins = ["//:compose_plugin"],
     resource_files = glob([
-        "lib/src/main/resources/**/*"
+        "lib/src/main/resources/**/*",
     ]),
     srcs = [
         "src/main/kotlin/*.kt",

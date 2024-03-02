@@ -1,40 +1,40 @@
 load(
-    "@io_bazel_rules_kotlin//kotlin:android.bzl", 
+    "@io_bazel_rules_kotlin//kotlin:android.bzl",
     "kt_android_library",
 )
 load(
-    "@rules_kotlin//kotlin:jvm.bzl", 
+    "@rules_kotlin//kotlin:jvm.bzl",
     "kt_jvm_binary",
 )
 
 kt_jvm_binary(
-    main_class = "main",
-    deps = [
-    ":calculate_engine_lib",
-    ],
     name = "calculate_engine_jvm",
-    plugins = ["//:compose_plugin"],
-    resources = glob([
-        "lib/src/main/resources/**/*"
-    ]),
     srcs = [
         "src/main/kotlin/*.kt",
         "src/main/kotlin/**/*.kt",
+    ],
+    main_class = "main",
+    plugins = ["//:compose_plugin"],
+    resources = glob([
+        "lib/src/main/resources/**/*",
+    ]),
+    deps = [
+        ":calculate_engine_lib",
     ],
 )
 
 kt_android_library(
-    custom_package = "dev.hyaena_technologies.calculate_engine.desktop",
-    deps = [
-    ":calculate_engine_lib",
-    ],
     name = "calculate_engine_desktop",
-    plugins = ["//:compose_plugin"],
-    resource_files = glob([
-        "lib/src/main/resources/**/*"
-    ]),
     srcs = [
         "src/main/kotlin/*.kt",
         "src/main/kotlin/**/*.kt",
+    ],
+    custom_package = "dev.hyaena_technologies.calculate_engine.desktop",
+    plugins = ["//:compose_plugin"],
+    resource_files = glob([
+        "lib/src/main/resources/**/*",
+    ]),
+    deps = [
+        ":calculate_engine_lib",
     ],
 )
