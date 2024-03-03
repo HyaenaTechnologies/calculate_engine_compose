@@ -6,13 +6,11 @@ load(
 kt_android_library(
     name = "calculate_engine_lib",
     srcs = [
-        "src/main/kotlin/*.kt",
-        "src/main/kotlin/**/*.kt",
+        "src/main/kotlin/**",
     ],
-    custom_package = "dev.hyaena_technologies.calculate_engine.lib",
     plugins = ["//:compose_plugin"],
     resource_files = glob([
-        "src/main/resources/**/*",
+        "src/main/resources/**",
     ]),
     deps = [
         # Android

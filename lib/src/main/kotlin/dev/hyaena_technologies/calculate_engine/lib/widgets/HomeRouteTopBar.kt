@@ -1,4 +1,4 @@
-package dev.hyaena_technologies.calculate_engine.widgets
+package lib.src.main.kotlin.dev.hyaena_technologies.calculate_engine.lib.widgets
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.Info

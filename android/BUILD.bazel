@@ -10,19 +10,17 @@ load(
 android_binary(
     name = "calculate_engine_apk",
     srcs = [
-        "src/main/kotlin/*.kt",
-        "src/main/kotlin/**/*.kt",
+        "src/main/kotlin/**",
     ],
     assets = glob([
-        "src/main/assets/**/*",
+        "src/main/assets/**",
     ]),
     assets_dir = "src/main/assets",
-    custom_package = "dev.hyaena_technologies.calculate_engine.android",
     manifest = "src/main/AndroidManifest.xml",
     plugins = ["//:compose_plugin"],
     resource_files = glob([
-        "src/main/res/**/*",
-        "lib/src/main/resources/**/*",
+        "src/main/res/**",
+        "lib/src/main/resources/**",
     ]),
     deps = [
         ":calculate_engine_lib",
@@ -32,19 +30,17 @@ android_binary(
 kt_android_library(
     name = "calculate_engine_android",
     srcs = [
-        "src/main/kotlin/*.kt",
-        "src/main/kotlin/**/*.kt",
+        "src/main/kotlin/**",
     ],
     assets = glob([
-        "src/main/assets/**/*",
+        "src/main/assets/**",
     ]),
     assets_dir = "src/main/assets",
-    custom_package = "dev.hyaena_technologies.calculate_engine.android",
     manifest = "src/main/AndroidManifest.xml",
     plugins = ["//:compose_plugin"],
     resource_files = glob([
-        "src/main/res/**/*",
-        "lib/src/main/resources/**/*",
+        "src/main/res/**",
+        "lib/src/main/resources/**",
     ]),
     deps = [
         ":calculate_engine_lib",

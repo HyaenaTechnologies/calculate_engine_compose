@@ -1,4 +1,4 @@
-package dev.hyaena_technologies.calculate_engine
+package lib.src.main.kotlin.dev.hyaena_technologies.calculate_engine.lib
 
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme

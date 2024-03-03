@@ -1,4 +1,4 @@
-package dev.hyaena_technologies.calculate_engine.theme
+package lib.src.main.kotlin.dev.hyaena_technologies.calculate_engine.lib.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme

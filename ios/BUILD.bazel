@@ -26,13 +26,11 @@ ios_application(
 kt_android_library(
     name = "calculate_engine_ios",
     srcs = [
-        "src/main/kotlin/*.kt",
-        "src/main/kotlin/**/*.kt",
+        "src/main/kotlin/**",
     ],
-    custom_package = "dev.hyaena_technologies.calculate_engine.ios",
     plugins = ["//:compose_plugin"],
     resource_files = glob([
-        "lib/src/main/resources/**/*",
+        "lib/src/main/resources/**",
     ]),
     deps = [
         ":calculate_engine_lib",

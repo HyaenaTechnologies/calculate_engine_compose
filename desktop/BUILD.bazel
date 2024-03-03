@@ -10,13 +10,12 @@ load(
 kt_jvm_binary(
     name = "calculate_engine_jvm",
     srcs = [
-        "src/main/kotlin/*.kt",
-        "src/main/kotlin/**/*.kt",
+        "src/main/kotlin/**",
     ],
     main_class = "main",
     plugins = ["//:compose_plugin"],
     resources = glob([
-        "lib/src/main/resources/**/*",
+        "lib/src/main/resources/**",
     ]),
     deps = [
         ":calculate_engine_lib",
@@ -26,13 +25,11 @@ kt_jvm_binary(
 kt_android_library(
     name = "calculate_engine_desktop",
     srcs = [
-        "src/main/kotlin/*.kt",
-        "src/main/kotlin/**/*.kt",
+        "src/main/kotlin/**",
     ],
-    custom_package = "dev.hyaena_technologies.calculate_engine.desktop",
     plugins = ["//:compose_plugin"],
     resource_files = glob([
-        "lib/src/main/resources/**/*",
+        "lib/src/main/resources/**",
     ]),
     deps = [
         ":calculate_engine_lib",

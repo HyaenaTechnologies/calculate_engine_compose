@@ -1,5 +1,6 @@
-package dev.hyaena_technologies.calculate_engine.theme
+package lib.src.main.kotlin.dev.hyaena_technologies.calculate_engine.lib.theme
 
+import android.graphics.Color
 import androidx.compose.ui.graphics.Color
 
 // Custom Colors
