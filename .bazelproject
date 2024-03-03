@@ -13,27 +13,16 @@ bazel_binary: /usr/bin/kotlin/bazel_build/bazel
 
 directories:
   .
-  android
-  desktop
-  ios
-  lib
-  test
-  web
+  app
 
 java_language_level: 17
 
 shard_sync: true
 
 targets:
-  android
-  desktop
-  ios
-  lib
-  test
-  web
+  app
 
 test_sources:
-  test/src/main/kotlin/*.kt
-  test/src/main/kotlin/*/*.kt
+  app/test/kotlin/*
 
 workspace_type: android

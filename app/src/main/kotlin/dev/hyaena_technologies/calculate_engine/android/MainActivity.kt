@@ -10,15 +10,15 @@ import lib.src.main.kotlin.dev.hyaena_technologies.calculate_engine.lib.Calculat
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         setContent {
-            CalculateEngine()
+            CalculateEngineTheme {
+                Surface(
+                    modifier = Modifier.fillMaxSize(),
+                    color = MaterialTheme.colorScheme.background,
+                ) {
+                    HomeRoute()
+                }
+            }       
         }
     }
-}
-
-@Preview
-@Composable
-fun AppAndroidPreview() {
-    CalculateEngine()
 }
