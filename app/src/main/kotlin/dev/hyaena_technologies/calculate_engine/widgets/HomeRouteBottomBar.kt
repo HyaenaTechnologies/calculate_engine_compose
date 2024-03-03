@@ -1,4 +1,4 @@
-package lib.src.main.kotlin.dev.hyaena_technologies.calculate_engine.lib.widgets
+package app.src.main.kotlin.dev.hyaena_technologies.calculate_engine.widgets
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.AccountCircle
@@ -8,6 +8,7 @@ import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import org.w3c.dom.Text
 
 @Composable
 fun HomeRouteBottomBar() {

@@ -1,11 +1,11 @@
-package android.src.main.kotlin.dev.hyaena_technologies.calculate_engine.android
+package app.src.main.kotlin.dev.hyaena_technologies.calculate_engine
 
 import android.os.Bundle
+import android.view.Surface
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.tooling.preview.Preview
-import lib.src.main.kotlin.dev.hyaena_technologies.calculate_engine.lib.CalculateEngine
+import app.src.main.kotlin.dev.hyaena_technologies.calculate_engine.theme.CalculateEngineTheme
+import app.src.main.kotlin.dev.hyaena_technologies.calculate_engine.widgets.HomeRoute
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

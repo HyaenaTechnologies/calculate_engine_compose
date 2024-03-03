@@ -1,4 +1,4 @@
-package lib.src.main.kotlin.dev.hyaena_technologies.calculate_engine.lib.widgets
+package app.src.main.kotlin.dev.hyaena_technologies.calculate_engine.widgets
 
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.consumeWindowInsets

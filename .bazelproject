@@ -13,14 +13,13 @@ bazel_binary: /usr/bin/kotlin/bazel_build/bazel
 
 directories:
   .
-  app
 
 java_language_level: 17
 
 shard_sync: true
 
 targets:
-  app
+  app:App
 
 test_sources:
   app/test/kotlin/*
