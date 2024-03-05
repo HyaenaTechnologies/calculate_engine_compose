@@ -8,5 +8,9 @@ common --incompatible_java_common_parameters
 
 # Flags to enable mobile-install v3
 mobile-install --mode=skylark --mobile_install_aspect=@rules_android//mobile_install:mi.bzl --mobile_install_supported_rules=android_binary
+
 # Required to invoke the Studio deployer jar
 mobile-install --tool_java_runtime_version=17
+
+# Allocate Memory to Sync
+startup --host_jvm_args=-Xmx15g

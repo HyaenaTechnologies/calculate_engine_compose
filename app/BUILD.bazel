@@ -1,10 +1,10 @@
 load(
-    "@io_bazel_rules_kotlin//kotlin:android.bzl",
-    "kt_android_library",
-)
-load(
     "@rules_android//android:rules.bzl",
     "android_binary",
+)
+load(
+    "@rules_kotlin//kotlin:android.bzl",
+    "kt_android_library",
 )
 
 android_binary(
@@ -17,7 +17,7 @@ android_binary(
     ]),
     assets_dir = "src/main/assets",
     manifest = "src/main/AndroidManifest.xml",
-    plugins = ["//:compose_plugin"],
+    plugins = [":compose_plugin"],
     resource_files = glob([
         "src/main/res/**",
     ]),
@@ -36,7 +36,7 @@ kt_android_library(
     ]),
     assets_dir = "src/main/assets",
     manifest = "src/main/AndroidManifest.xml",
-    plugins = ["//:compose_plugin"],
+    plugins = [":compose_plugin"],
     resource_files = glob([
         "src/main/res/**",
     ]),

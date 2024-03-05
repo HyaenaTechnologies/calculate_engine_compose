@@ -1,23 +1,13 @@
 load(
-    "@io_bazel_rules_kotlin//kotlin:core.bzl",
-    "kt_compiler_plugin",
-)
-load(
     "@rules_kotlin//kotlin:core.bzl",
     "define_kt_toolchain",
+    "kt_compiler_plugin",
 )
 
 define_kt_toolchain(
     name = "kotlin_toolchain",
     api_version = "1.9",
-    experimental_multiplex_workers = True,
-    experimental_reduce_classpath_mode = True,
-    experimental_report_unused_deps = True,
-    experimental_strict_kotlin_deps = True,
-    experimental_use_abi_jars = True,
-    javac_options = "-Xmx2048M -Dfile.encoding=UTF-8",
     jvm_target = "17",
-    kotlinc_options = "-Xmx2048M -Dfile.encoding=UTF-8",
     language_version = "1.9",
 )
 
@@ -29,15 +19,7 @@ kt_compiler_plugin(
 )
 
 platform(
-    name = "android_armeabi-v7a",
-    constraint_values = [
-        "@platforms//cpu:armeabi-v7a",
-        "@platforms//os:android",
-    ],
-)
-
-platform(
-    name = "android_arm64-v8a",
+    name = "android_arm64",
     constraint_values = [
         "@platforms//cpu:arm64",
         "@platforms//os:android",

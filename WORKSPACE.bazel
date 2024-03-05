@@ -1,1 +1,53 @@
 workspace(name = "calculate_engine_workspace")
+
+load(
+    "@rules_android//android:rules.bzl",
+    "android_ndk_repository",
+    "android_sdk_repository",
+)
+load(
+    "@rules_java//java:defs.bzl",
+    "java_runtime",
+    "java_toolchain",
+)
+
+android_ndk_repository(
+    name = "android_ndk",
+    api_level = 34,
+    path = "~/Android/Sdk/ndk",
+)
+
+android_sdk_repository(
+    name = "androidsdk",
+    api_level = 34,
+    build_tools_version = "34.0.0",
+    path = "~/Android/Sdk",
+)
+
+java_runtime(
+    name = "java_runtime",
+    srcs = [
+        "usr/bin/kotlin/jbr/*",
+    ],
+    java = "usr/bin/kotlin/jbr/bin",
+    version = 17,
+)
+
+java_toolchain(
+    name = "java_toolchain",
+    genclass = None,
+    ijar = None,
+    java_runtime = ":java_runtime",
+    javabuilder = None,
+    jvm_opts = [
+        "-Xmx2048M -Dfile.encoding=UTF-8",
+    ],
+    singlejar = None,
+    source_version = "17",
+    target_version = "17",
+)
+
+register_toolchains(
+    "@rules_android//toolchains/android:android_default_toolchain",
+    "@rules_android//toolchains/android_sdk:android_sdk_tools",
+)
