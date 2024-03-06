@@ -108,7 +108,7 @@ dependencies {
     implementation("org.jetbrains.compose.material:material:1.5.12")
     implementation("org.jetbrains.compose.material3:material3:1.5.12")
     implementation("org.jetbrains.compose.runtime:runtime:1.5.12")
-    implementation("org.jetbrains.compose.ui:ui:1.5.12")
+    implementation("org.jetbrains.compose.ui:ui:1.6.0")
     implementation("org.jetbrains.kotlin:kotlin-stdlib:1.9.22")
     implementation("org.jetbrains.kotlinx:kotlinx-collections-immutable:0.3.7")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
