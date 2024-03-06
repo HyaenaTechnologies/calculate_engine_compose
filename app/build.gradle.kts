@@ -79,7 +79,7 @@ dependencies {
     // KTOR
     implementation("io.ktor:ktor-client-auth:2.3.8")
     implementation("io.ktor:ktor-client-core:2.3.8")
-    implementation("io.ktor:ktor-client-cio:2.3.8")
+    implementation("io.ktor:ktor-client-cio:2.3.9")
     implementation("io.ktor:ktor-client-content-negotiation:2.3.8")
     implementation("io.ktor:ktor-client-encoding:2.3.8")
     implementation("io.ktor:ktor-client-json:2.3.8")
