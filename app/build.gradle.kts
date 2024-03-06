@@ -104,7 +104,7 @@ dependencies {
     implementation("org.jetbrains.compose.animation:animation:1.5.12")
     implementation("org.jetbrains.compose.desktop:desktop:1.5.12")
     implementation("org.jetbrains.compose.foundation:foundation:1.5.12")
-    implementation("org.jetbrains.compose.html:html-core:1.5.12")
+    implementation("org.jetbrains.compose.html:html-core:1.6.0")
     implementation("org.jetbrains.compose.material:material:1.5.12")
     implementation("org.jetbrains.compose.material3:material3:1.5.12")
     implementation("org.jetbrains.compose.runtime:runtime:1.5.12")
