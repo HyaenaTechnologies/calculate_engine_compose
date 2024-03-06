@@ -85,7 +85,7 @@ dependencies {
     implementation("io.ktor:ktor-client-json:2.3.8")
     implementation("io.ktor:ktor-client-logging:2.3.8")
     implementation("io.ktor:ktor-client-resources:2.3.8")
-    implementation("io.ktor:ktor-client-serialization:2.3.8")
+    implementation("io.ktor:ktor-client-serialization:2.3.9")
     implementation("io.ktor:ktor-events:2.3.8")
     implementation("io.ktor:ktor-http:2.3.8")
     implementation("io.ktor:ktor-http-cio:2.3.8")
