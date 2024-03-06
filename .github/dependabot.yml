@@ -16,5 +16,14 @@ updates:
       day: "saturday"
       interval: "weekly"
       time: "03:00"
+  
+  - package-ecosystem: "gradle"
+    commit-message:
+      prefix: "Gradle"
+    directory: "/app" 
+    schedule:
+      day: "saturday"
+      interval: "weekly"
+      time: "03:00"
     
 version: 2
