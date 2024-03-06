@@ -14,9 +14,10 @@ bazel_binary: /usr/bin/kotlin/bazel_build/bazel
 directories:
   .
 
-derive_targets_from_directories: true
-
 java_language_level: 17
+
+targets:
+  //app:all
 
 test_sources:
   app/test/kotlin/*

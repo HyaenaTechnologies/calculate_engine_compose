@@ -27,12 +27,12 @@ bazel_dep(
     version = "1.9.1",
 )
 
-maven = use_extension(
+maven_package_manager = use_extension(
     "@rules_jvm_external//:extensions.bzl",
     "maven",
 )
 
-maven.install(
+maven_package_manager.install(
     artifacts = [
         # Android
         "androidx.activity:activity-compose:1.8.2",
@@ -112,7 +112,6 @@ maven.install(
         "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.3",
         "org.jetbrains.kotlinx:lincheck:2.25",
     ],
-    fetch_sources = True,
     repositories = [
         "https://maven.pkg.jetbrains.space/public/p/compose/dev",
         "https://maven.google.com",
@@ -127,9 +126,8 @@ remote_android_extensions = use_extension(
 )
 
 use_repo(
-    maven,
+    maven_package_manager,
     "maven",
-    "unpinned_maven",
 )
 
 use_repo(

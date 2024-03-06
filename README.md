@@ -1,12 +1,14 @@
 [Android]: https://developer.android.com/studio
 
-[Bazel]:https://bazel.build/reference
+[Bazel]: https://bazel.build/reference
 
 [Compose]: https://developer.android.com/jetpack/compose
 
 [ComposeMulti]: https://jetbrains.com/lp/compose-multiplatform/
 
 [Fleet]: https://jetbrains.com/fleet/
+
+[Gradle]: https://gradle.org/
 
 [IDEA]: https://jetbrains.com/idea/
 
@@ -25,12 +27,12 @@
 <a href="https://github.com/HyaenaTechnologies/calculate_engine_compose">
   <h1>
     <picture>
-      <img src="https://github.com/HyaenaTechnologies/calculate_engine_compose/blob/main/lib/src/main/resources/hce_markdown.png" alt="">
+      <img src="https://github.com/HyaenaTechnologies/calculate_engine_compose/blob/main/app/src/main/res/raw/hce_markdown.png" alt="">
     </picture>
   </h1>
 </a>
 
-[![Bazel Workflow](https://github.com/HyaenaTechnologies/calculate_engine_compose/actions/workflows/android.yml/badge.svg)](https://github.com/HyaenaTechnologies/calculate_engine_compose/actions/workflows/android.yml)
+[![Anroid Workflow](https://github.com/HyaenaTechnologies/calculate_engine_compose/actions/workflows/android.yml/badge.svg)](https://github.com/HyaenaTechnologies/calculate_engine_compose/actions/workflows/android.yml)
 
 # Calculate Engine
 
@@ -42,6 +44,7 @@ Steps and promote [OpenStax][Stax], [Rice University][Rice].
 - [Android Studio][Android]
 - [Bazel Build][Bazel]
 - [Compose Multiplatform][ComposeMulti]
+- [Gradle Build][Gradle]
 - [IntelliJ IDEA][IDEA]
 - [Kotlin Language][Kotlin]
 - [Kotlin Multiplatform][KMP]
@@ -54,4 +57,12 @@ Steps and promote [OpenStax][Stax], [Rice University][Rice].
 git clone
 
 bazel build
+```
+
+OR
+
+```shell
+git clone
+
+gradle build
 ```

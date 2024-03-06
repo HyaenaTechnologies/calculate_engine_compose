@@ -6,48 +6,29 @@ load(
     "android_sdk_repository",
 )
 load(
-    "@rules_java//java:defs.bzl",
-    "java_runtime",
-    "java_toolchain",
+    "@rules_kotlin//kotlin:repositories.bzl",
+    "kotlin_repositories",
+    "kotlinc_version",
 )
 
 android_ndk_repository(
     name = "android_ndk",
     api_level = 34,
-    path = "~/Android/Sdk/ndk",
+    path = "../../Android/Sdk/ndk/26.2.11394342",
 )
 
 android_sdk_repository(
     name = "androidsdk",
     api_level = 34,
     build_tools_version = "34.0.0",
-    path = "~/Android/Sdk",
+    path = "../../Android/Sdk",
 )
 
-java_runtime(
-    name = "java_runtime",
-    srcs = [
-        "usr/bin/kotlin/jbr/*",
-    ],
-    java = "usr/bin/kotlin/jbr/bin",
-    version = 17,
+kotlin_repositories(
+    compiler_release = kotlinc_version(
+        release = "1.9.22",
+        sha256 = "88b39213506532c816ff56348c07bbeefe0c8d18943bffbad11063cf97cac3e6",
+    ),
 )
 
-java_toolchain(
-    name = "java_toolchain",
-    genclass = None,
-    ijar = None,
-    java_runtime = ":java_runtime",
-    javabuilder = None,
-    jvm_opts = [
-        "-Xmx2048M -Dfile.encoding=UTF-8",
-    ],
-    singlejar = None,
-    source_version = "17",
-    target_version = "17",
-)
-
-register_toolchains(
-    "@rules_android//toolchains/android:android_default_toolchain",
-    "@rules_android//toolchains/android_sdk:android_sdk_tools",
-)
+register_toolchains("//:kotlin_toolchain")
