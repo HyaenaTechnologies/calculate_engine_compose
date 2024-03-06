@@ -116,7 +116,7 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.5.0")
     implementation("org.jetbrains.kotlinx:kotlinx-io-bytestring:0.3.1")
     implementation("org.jetbrains.kotlinx:kotlinx-io-core:0.3.1")
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-core:1.6.2")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-core:1.6.3")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.2")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-properties:1.6.2")
     implementation("org.jetbrains.kotlinx:kotlinx-metadata-jvm:0.9.0")
