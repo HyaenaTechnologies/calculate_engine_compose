@@ -12,5 +12,5 @@ mobile-install --mode=skylark --mobile_install_aspect=@rules_android//mobile_ins
 # Required to invoke the Studio deployer jar
 mobile-install --tool_java_runtime_version=17
 
-# Allocate Memory to Sync
+# Allocate Memory to Synchronization
 startup --host_jvm_args=-Xmx15g
