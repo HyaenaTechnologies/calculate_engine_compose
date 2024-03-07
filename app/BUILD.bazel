@@ -50,7 +50,7 @@ kt_android_library(
         "@maven//:androidx_compose_material3_material3",
         "@maven//:androidx_compose_runtime_runtime",
         "@maven//:androidx_compose_ui_ui",
-        "@maven//:androidx_compose_ui_ui_tooling",
+        "@maven//:androidx_compose_ui_ui_tooling_preview",
         "@maven//:androidx_constraintlayout_constraintlayout_compose",
         "@maven//:androidx_core_core_ktx",
         "@maven//:androidx_lifecycle_lifecycle_runtime_compose",
