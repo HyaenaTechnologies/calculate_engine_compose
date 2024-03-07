@@ -1,4 +1,4 @@
-package app.src.main.kotlin.dev.hyaena_technologies.calculate_engine.widgets
+package dev.hyaena_technologies.calculate_engine.widgets
 
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.layout.Arrangement

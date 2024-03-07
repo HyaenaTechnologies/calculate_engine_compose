@@ -1,5 +1,6 @@
 plugins {
     id("com.android.application")
+    id("org.jetbrains.compose")
     id("org.jetbrains.kotlin.android")
 }
 
@@ -28,7 +29,7 @@ android {
     compileSdk = 34
 
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.10"
+        kotlinCompilerExtensionVersion = "1.5.12"
     }
 
     defaultConfig {
