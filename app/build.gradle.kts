@@ -1,5 +1,6 @@
 plugins {
     id("com.android.application")
+    id("org.gradle.android.cache-fix")
     id("org.jetbrains.compose")
     id("org.jetbrains.kotlin.android")
 }
