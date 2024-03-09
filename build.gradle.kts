@@ -6,7 +6,7 @@ plugins {
     id("org.gradle.android.cache-fix") version "3.0.1" apply false
     id("org.jetbrains.compose") version "1.5.12" apply false
     id("org.jetbrains.kotlin.android") version "1.9.22" apply false
-    id("org.jetbrains.kotlin.jvm") version "1.9.22" apply false
+    id("org.jetbrains.kotlin.jvm") version "1.9.23" apply false
     id("org.jetbrains.kotlin.js") version "1.9.22" apply false
     id("org.jetbrains.kotlin.multiplatform") version "1.9.22" apply false
 }
