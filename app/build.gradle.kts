@@ -135,7 +135,7 @@ dependencies {
     testImplementation("io.ktor:ktor-client-content-negotiation-tests:2.3.9")
     testImplementation("io.ktor:ktor-serialization-tests:2.3.9")
     testImplementation("io.ktor:ktor-serialization-kotlinx-tests:2.3.9")
-    testImplementation("org.jetbrains.kotlin:kotlin-test:1.9.22")
+    testImplementation("org.jetbrains.kotlin:kotlin-test:1.9.23")
     testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.8.0")
     testImplementation("org.jetbrains.kotlinx:lincheck:2.26")
 }
