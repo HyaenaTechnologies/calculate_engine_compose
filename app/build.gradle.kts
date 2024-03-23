@@ -146,5 +146,5 @@ dependencies {
     testImplementation("io.ktor:ktor-serialization-kotlinx-tests:$io_ktor")
     testImplementation("org.jetbrains.kotlin:kotlin-test:$jetbrains_kotlin")
     testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:$org_jetbrains_kotlinx_coroutines")
-    testImplementation("org.jetbrains.kotlinx:lincheck:2.26")
+    testImplementation("org.jetbrains.kotlinx:lincheck:2.28.1")
 }
