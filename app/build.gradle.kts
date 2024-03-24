@@ -60,14 +60,14 @@ android {
     ndkVersion = "26.2.11394342"
 }
 
-val androidx_compose: String = "1.6.3"
+val androidx_compose: String = "1.6.4"
 val androidx_lifecycle: String = "2.7.0"
 val com_google_accompanist: String = "0.35.0-alpha"
 val io_ktor: String = "2.3.9"
 val org_jetbrains_compose: String = "1.6.1"
 val jetbrains_kotlin: String = "1.9.22"
 val org_jetbrains_kotlinx_coroutines: String = "1.8.0"
-val org_jetbrains_kotlinx_io: String = "0.3.1"
+val org_jetbrains_kotlinx_io: String = "0.3.2"
 
 dependencies {
     // Android
@@ -146,5 +146,5 @@ dependencies {
     testImplementation("io.ktor:ktor-serialization-kotlinx-tests:$io_ktor")
     testImplementation("org.jetbrains.kotlin:kotlin-test:$jetbrains_kotlin")
     testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:$org_jetbrains_kotlinx_coroutines")
-    testImplementation("org.jetbrains.kotlinx:lincheck:2.26")
+    testImplementation("org.jetbrains.kotlinx:lincheck:2.28.1")
 }
