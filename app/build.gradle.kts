@@ -60,7 +60,7 @@ android {
     ndkVersion = "26.2.11394342"
 }
 
-val androidx_compose: String = "1.6.4"
+val androidx_compose: String = "1.6.3"
 val androidx_lifecycle: String = "2.7.0"
 val com_google_accompanist: String = "0.35.0-alpha"
 val io_ktor: String = "2.3.9"
@@ -133,9 +133,9 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.5.0")
     implementation("org.jetbrains.kotlinx:kotlinx-io-bytestring:$org_jetbrains_kotlinx_io")
     implementation("org.jetbrains.kotlinx:kotlinx-io-core:$org_jetbrains_kotlinx_io")
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-core:1.6.3")
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3")
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-properties:1.6.3")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-core:$androidx_compose")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:$androidx_compose")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-properties:$androidx_compose")
     implementation("org.jetbrains.kotlinx:kotlinx-metadata-jvm:0.9.0")
     // Tests
     testImplementation("androidx.compose.ui:ui-test:$androidx_compose")
