@@ -20,7 +20,7 @@ updates:
   - package-ecosystem: "gradle"
     commit-message:
       prefix: "Gradle"
-    directory: "/jetpackCompose"
+    directory: "/lib"
     schedule:
       day: "saturday"
       interval: "weekly"

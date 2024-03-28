@@ -67,7 +67,6 @@ val androidx_compose: String = "1.6.3"
 val androidx_lifecycle: String = "2.7.0"
 val com_google_accompanist: String = "0.35.0-alpha"
 val io_ktor: String = "2.3.9"
-val org_jetbrains_compose: String = "1.6.1"
 val jetbrains_kotlin: String = "1.9.23"
 val org_jetbrains_kotlinx_coroutines: String = "1.8.0"
 val org_jetbrains_kotlinx_io: String = "0.3.2"
@@ -121,14 +120,6 @@ dependencies {
     implementation("io.ktor:ktor-websockets:$io_ktor")
     implementation("io.ktor:ktor-websocket-serialization:$io_ktor")
     // JetBrains
-    implementation("org.jetbrains.compose.animation:animation:$org_jetbrains_compose")
-    implementation("org.jetbrains.compose.desktop:desktop:$org_jetbrains_compose")
-    implementation("org.jetbrains.compose.foundation:foundation:$org_jetbrains_compose")
-    implementation("org.jetbrains.compose.html:html-core:$org_jetbrains_compose")
-    implementation("org.jetbrains.compose.material:material:$org_jetbrains_compose")
-    implementation("org.jetbrains.compose.material3:material3:$org_jetbrains_compose")
-    implementation("org.jetbrains.compose.runtime:runtime:$org_jetbrains_compose")
-    implementation("org.jetbrains.compose.ui:ui:$org_jetbrains_compose")
     implementation("org.jetbrains.kotlin:kotlin-stdlib:$jetbrains_kotlin")
     implementation("org.jetbrains.kotlinx:kotlinx-collections-immutable:0.3.7")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:$org_jetbrains_kotlinx_coroutines")
