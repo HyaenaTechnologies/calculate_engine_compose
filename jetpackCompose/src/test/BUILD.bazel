@@ -4,13 +4,18 @@ load(
 )
 
 kt_android_local_test(
-    name = "calculate_engine_test_multiplatform",
+    name = "calculate_engine_android_test",
     srcs = [
-        "src/commonTest/kotlin/**",
+        "src/test/kotlin/**",
     ],
+    assets = glob([
+        "src/main/assets/**",
+    ]),
+    assets_dir = "src/main/assets",
+    manifest = "src/main/AndroidManifest.xml",
     plugins = [":compose_plugin"],
     resource_files = glob([
-        "src/commonTest/resources/**",
+        "src/main/res/**",
     ]),
     deps = [
         # Android
