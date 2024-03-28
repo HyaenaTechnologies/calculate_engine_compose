@@ -1,6 +1,6 @@
 plugins {
     val com_android: String = "8.2.2"
-    val org_jetbrains_kotlin: String = "1.9.22"
+    val org_jetbrains_kotlin: String = "1.9.23"
 
     id("com.android.application") version "$com_android" apply false
     id("com.android.library") version "$com_android" apply false

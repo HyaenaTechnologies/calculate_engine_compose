@@ -1,3 +1,6 @@
+import com.android.build.gradle.ProguardFiles.getDefaultProguardFile
+import org.jetbrains.compose.ComposePlugin.CommonComponentsDependencies.resources
+
 plugins {
     id("com.android.application")
     id("org.gradle.android.cache-fix")
@@ -30,7 +33,7 @@ android {
     compileSdk = 34
 
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.10"
+        kotlinCompilerExtensionVersion = "1.5.11"
     }
 
     defaultConfig {
@@ -65,7 +68,7 @@ val androidx_lifecycle: String = "2.7.0"
 val com_google_accompanist: String = "0.35.0-alpha"
 val io_ktor: String = "2.3.9"
 val org_jetbrains_compose: String = "1.6.1"
-val jetbrains_kotlin: String = "1.9.22"
+val jetbrains_kotlin: String = "1.9.23"
 val org_jetbrains_kotlinx_coroutines: String = "1.8.0"
 val org_jetbrains_kotlinx_io: String = "0.3.2"
 
@@ -73,7 +76,7 @@ dependencies {
     // Android
     implementation("androidx.activity:activity-compose:1.8.2")
     implementation("androidx.compose.animation:animation:$androidx_compose")
-    implementation("androidx.compose.compiler:compiler:1.5.10")
+    implementation("androidx.compose.compiler:compiler:1.5.11")
     implementation("androidx.compose.foundation:foundation:$androidx_compose")
     implementation("androidx.compose.material:material:$androidx_compose")
     implementation("androidx.compose.material3:material3:1.2.1")

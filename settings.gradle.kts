@@ -6,7 +6,7 @@ dependencyResolutionManagement {
     }
 }
 
-include(":app")
+include(":jetpackCompose")
 
 pluginManagement {
     repositories {

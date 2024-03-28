@@ -12,6 +12,16 @@
             "name": "Bazel Build",
             "program": "/usr/bin/kotlin/bazel_build/bazel",
             "type": "command"
+        },
+        {
+            "args": [
+                "--info"
+            ],
+            "name": "Gradle Build",
+            "tasks": [
+                "build"
+            ],
+            "type": "gradle"
         }
     ]
 }

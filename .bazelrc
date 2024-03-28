@@ -1,3 +1,9 @@
+# Apple Support
+build --enable_platform_specific_config
+build:macos --apple_crosstool_top=@local_config_apple_cc//:toolchain
+build:macos --crosstool_top=@local_config_apple_cc//:toolchain
+build:macos --host_crosstool_top=@local_config_apple_cc//:toolchain
+
 # Flags needed while the Android rules are being migrated to Starlark.
 common --android_databinding_use_v3_4_args
 common --enable_bzlmod

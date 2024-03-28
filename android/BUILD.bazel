@@ -1,0 +1,51 @@
+load(
+    "@rules_android//android:rules.bzl",
+    "android_binary",
+)
+load(
+    "@rules_kotlin//kotlin:android.bzl",
+    "kt_android_library",
+)
+
+android_binary(
+    name = "calculate_engine_apk_multiplatform",
+    srcs = [
+        "lib/src/commonMain/kotlin/**",
+        "src/androidMain/kotlin/**",
+    ],
+    assets = glob([
+        "src/androidMain/assets/**",
+    ]),
+    assets_dir = "src/androidMain/assets",
+    manifest = "src/androidMain/AndroidManifest.xml",
+    plugins = [":compose_plugin"],
+    resource_files = glob([
+        "lib/src/commonMain/resources/**",
+        "src/androidMain/res/**",
+    ]),
+    deps = [
+        ":calculate_engine_android_multiplatform",
+        "//lib:calculate_engine_lib_multiplatform",
+    ],
+)
+
+kt_android_library(
+    name = "calculate_engine_android_multiplatform",
+    srcs = [
+        "lib/src/commonMain/kotlin/**",
+        "src/androidMain/kotlin/**",
+    ],
+    assets = glob([
+        "src/androidMain/assets/**",
+    ]),
+    assets_dir = "src/androidMain/assets",
+    manifest = "src/androidMain/AndroidManifest.xml",
+    plugins = [":compose_plugin"],
+    resource_files = glob([
+        "lib/src/commonMain/resources/**",
+        "src/androidMain/res/**",
+    ]),
+    deps = [
+        "//lib:calculate_engine_lib_multiplatform",
+    ],
+)

@@ -1,0 +1,42 @@
+load(
+    "@rules_kotlin//kotlin:android.bzl",
+    "kt_android_library",
+)
+load(
+    "@rules_kotlin//kotlin:jvm.bzl",
+    "kt_jvm_binary",
+)
+
+kt_jvm_binary(
+    name = "calculate_engine_desktop_exe",
+    srcs = [
+        "lib/src/commonMain/kotlin/**",
+        "src/desktopMain/kotlin/**",
+    ],
+    main_class = "MainKt",
+    plugins = [":compose_plugin"],
+    resources = glob([
+        "lib/src/commonMain/resources/**",
+        "src/desktopMain/res/**",
+    ]),
+    deps = [
+        ":calculate_engine_desktop",
+        "//lib:calculate_engine_lib_multiplatform",
+    ],
+)
+
+kt_android_library(
+    name = "calculate_engine_desktop",
+    srcs = [
+        "lib/src/commonMain/kotlin/**",
+        "src/desktopMain/kotlin/**",
+    ],
+    plugins = [":compose_plugin"],
+    resource_files = glob([
+        "lib/src/commonMain/resources/**",
+        "src/desktopMain/res/**",
+    ]),
+    deps = [
+        "//lib:calculate_engine_lib_multiplatform",
+    ],
+)
